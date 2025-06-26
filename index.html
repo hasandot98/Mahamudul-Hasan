@@ -49,11 +49,13 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: glowText 2.5s ease-in-out infinite;
+    }
+
+    .name-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      animation: glowText 2.5s ease-in-out infinite;
-      vertical-align: middle;
+      gap: 6px;
     }
 
     .verified-badge {
@@ -163,8 +165,10 @@
   <div class="profile-box">
     <img src="https://avatars.githubusercontent.com/u/128597477?v=4" alt="Hasan's Photo" />
     <h1>
-      Mahamudul Hasan
-      <i class="fa-solid fa-circle-check verified-badge" title="Verified" aria-label="Verified"></i>
+      <span class="name-badge">
+        Mahamudul Hasan
+        <i class="fa-solid fa-circle-check verified-badge" title="Verified" aria-label="Verified"></i>
+      </span>
     </h1>
     <p>Muslim • Bangladeshi.</p>
     <ul>
@@ -201,7 +205,7 @@
           <span class="sub-text">Started in 2023</span>
         </div>
       </li>
-       <li>
+      <li>
         <i class="fa-solid fa-graduation-cap"></i>
         <div class="intro-text-wrapper">
           <span>Studied at 
@@ -223,18 +227,17 @@
           <span class="sub-text">Class of 2020</span>
         </div>
       </li>
-       <li>
+      <li>
         <i class="fa-solid fa-graduation-cap"></i>
         <div class="intro-text-wrapper">
           <span>Studied at 
             <strong>
-              <a href="https://wwww.facebook.com/KKZSOfficial10" target="_blank" rel="noopener noreferrer">Kanungopara KZ School</a>
+              <a href="https://www.facebook.com/KKZSOfficial10" target="_blank" rel="noopener noreferrer">Kanungopara KZ School</a>
             </strong>
           </span>
           <span class="sub-text">Class of 2014</span>
         </div>
       </li>
-      
       <li><i class="fa-solid fa-house-chimney"></i><span>Lives in <strong>Chittagong, Bangladesh</strong></span></li>
       <li><i class="fa-solid fa-location-dot"></i><span>From <strong>Chittagong, Bangladesh</strong></span></li>
       <li><i class="fa-solid fa-envelope"></i><a href="mailto:hasaaan7370@gmail.com">hasaaan7370@gmail.com</a></li>
