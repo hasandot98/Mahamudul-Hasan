@@ -53,11 +53,14 @@
       align-items: center;
       gap: 8px;
       animation: glowText 2.5s ease-in-out infinite;
+      vertical-align: middle;
     }
 
     .verified-badge {
       color: #3b82f6;
       font-size: 1.1rem;
+      vertical-align: middle;
+      flex-shrink: 0;
     }
 
     .profile-box p {
@@ -99,6 +102,7 @@
       color: #94a3b8;
       font-size: 1.1rem;
       margin-top: 5px;
+      flex-shrink: 0;
     }
 
     .intro-text-wrapper {
@@ -130,6 +134,14 @@
       margin-top: 60px;
     }
 
+    footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -152,7 +164,7 @@
     <img src="https://avatars.githubusercontent.com/u/128597477?v=4" alt="Hasan's Photo" />
     <h1>
       Mahamudul Hasan
-      <i class="fa-solid fa-circle-check verified-badge" title="Verified"></i>
+      <i class="fa-solid fa-circle-check verified-badge" title="Verified" aria-label="Verified"></i>
     </h1>
     <p>Muslim • Bangladeshi.</p>
     <ul>
@@ -232,4 +244,13 @@
   </div>
 
   <footer>
-    &copy; 2025 Mahamudul Hasan. All
+    &copy; 2025
+    <span>
+      Mahamudul Hasan
+      <i class="fa-solid fa-circle-check verified-badge" title="Verified" aria-label="Verified"></i>
+    </span>
+    . All rights reserved.
+  </footer>
+
+</body>
+</html>
