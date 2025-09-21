@@ -10,20 +10,22 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #000; /* বাইরের background কালো */
+      background: transparent; /* কোনো background নেই */
       color: #e2e8f0;
-      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* স্ক্রিনের মাঝে রাখবে */
     }
 
     .profile-box {
       position: relative;
-      max-width: 800px;
-      margin: 50px auto;
+      width: 800px;
+      max-width: 95%;
       padding: 35px;
-      background: linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6); /* gradient শুধু box এর ভেতরে */
+      background: linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6);
       background-size: 300% 300%;
       animation: gradientMove 12s ease infinite;
-      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 25px;
       box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
       display: flex;
@@ -31,8 +33,6 @@
       align-items: flex-start;
       text-align: left;
       animation: fadeIn 1.2s ease forwards;
-      backdrop-filter: blur(15px);
-      z-index: 1;
     }
 
     .profile-box img {
@@ -126,12 +126,10 @@
 
     footer {
       text-align: center;
-      padding: 35px 15px;
+      padding: 20px 10px;
       color: #d1d5db;
-      font-size: 0.95rem;
-      margin-top: 60px;
-      position: relative;
-      z-index: 1;
+      font-size: 0.9rem;
+      margin-top: 25px;
     }
 
     footer span {
@@ -188,11 +186,11 @@
       <li><i class="fa-brands fa-github"></i><a href="https://github.com/hasandot98" target="_blank">github.com/hasandot98</a></li>
       <li><i class="fa-brands fa-telegram"></i><a href="https://t.me/hasanio98" target="_blank">t.me/hasanio98</a></li>
     </ul>
-  </div>
 
-  <footer>
-    &copy; 2025 <span>Mahamudul Hasan</span>. All rights reserved.
-  </footer>
+    <footer>
+      &copy; 2025 <span>Mahamudul Hasan</span>. All rights reserved.
+    </footer>
+  </div>
 
 </body>
 </html>
