@@ -7,125 +7,104 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
-    /* Global Styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
+      background: transparent;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #e2e8f0;
     }
 
-    /* Glassmorphism Container */
     .profile-box {
       width: 800px;
       max-width: 95%;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 25px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 35px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      animation: fadeIn 1s ease forwards;
+      align-items: flex-start;
+      text-align: left;
+      box-shadow: 0 0 25px rgba(56,189,248,0.3);
     }
 
-    /* Profile Image */
     .profile-box img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #38bdf8;
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.7);
+      width: 150px;
+      height: 150px;
+      border-radius: 0; /* square image */
+      border: 3px solid #38bdf8;
       margin-bottom: 20px;
-      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
     .profile-box img:hover {
-      transform: rotate(5deg) scale(1.1);
-      box-shadow: 0 0 40px rgba(236, 72, 153, 0.8);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(236,72,153,0.7);
     }
 
-    /* Name & Verified */
-    .profile-box h1 {
-      font-size: 2.5rem;
+    h1 {
+      font-size: 2.3rem;
       background: linear-gradient(90deg, #a855f7, #ec4899, #3b82f6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
-      animation: glowText 3s ease-in-out infinite;
     }
 
-    .name-badge { display: inline-flex; align-items: center; gap: 8px; }
-    .verified-badge { color: #38bdf8; font-size: 1.4rem; }
+    .name-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .verified-badge { color: #38bdf8; font-size: 1.2rem; }
 
-    /* Bio */
-    .profile-box p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
+    p {
+      font-size: 1.15rem;
       margin-bottom: 25px;
+      color: #f1f5f9;
     }
 
-    /* Info List */
-    .profile-box ul {
+    ul {
       list-style: none;
-      width: 100%;
       padding: 0;
+      margin: 0;
+      width: 100%;
     }
-    .profile-box li {
+
+    li {
       display: flex;
       align-items: center;
       gap: 15px;
-      padding: 12px 15px;
-      margin-bottom: 12px;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
     }
-    .profile-box li:hover {
-      transform: translateX(5px);
-      background: rgba(56, 189, 248, 0.1);
-    }
-    .profile-box li i {
-      font-size: 1.3rem;
+    li i {
+      font-size: 1.2rem;
       color: #38bdf8;
-      flex-shrink: 0;
     }
-    .profile-box li a {
+    li a {
       color: #e2e8f0;
       text-decoration: none;
       font-weight: 500;
-      transition: all 0.3s ease;
     }
-    .profile-box li a:hover {
+    li:hover {
+      transform: translateX(5px);
       color: #ec4899;
-      text-shadow: 0 0 8px rgba(236, 72, 153, 0.8);
     }
 
-    /* Footer */
     footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #94a3b8;
+      margin-top: 25px;
+      text-align: left;
       font-size: 0.9rem;
+      color: #94a3b8;
     }
     footer span {
       font-weight: 600;
       background: linear-gradient(90deg, #a855f7, #ec4899, #3b82f6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-
-    /* Animations */
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes glowText {
-      0%,100% { text-shadow: 0 0 12px rgba(168,85,247,0.4); }
-      50% { text-shadow: 0 0 25px rgba(236,72,153,0.8); }
     }
   </style>
 </head>
